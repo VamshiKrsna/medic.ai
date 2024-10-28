@@ -36,7 +36,7 @@ def get_pinecone_docsearch(index_name:str, embeddings):
     This function returns the Pinecone index object for the specified name.
     Args : 
     index_name : Name of the pinecone Index,
-    embeddings : 
+    embeddings : embeddings object from create_embeddings.py
     """
     docsearch = PineconeVectorStore.from_existing_index(
     index_name=index_name,
