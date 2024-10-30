@@ -3,13 +3,7 @@ medic.ai is a medical chatbot based on Retrieval Augmented Fine Tuning ( RAFT ),
 
 
 To-Do : 
-add pinecone index for medquad.csv -> Did FAISS for faster access locally,
+Completed chatbot locally, might try dockerization 
 
 
-complete RAFT -> Halfway in ,
-
-
-Give UI To both chatbots (GALE, Medquad) -> UI Almost done for v1
-
-
-Load FAISS Index and train SLM on it.
+Couldn't complete RAFT, out of time and Colab creds.
