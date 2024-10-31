@@ -46,6 +46,14 @@ class MedicAI:
         )
         return pc 
     
+    def add_embeddings_to_pinecone(documents, index_name, embedding):
+        docsearch = PineconeVectorStore.from_documents(
+           documents= documents,
+           index_name= index_name,
+           embedding= embedding
+        )
+        return docsearch
+    
     def get_docsearch_from_pinecone(self, index_name, embeddings):
         docsearch = PineconeVectorStore.from_existing_index(
             index_name=index_name,

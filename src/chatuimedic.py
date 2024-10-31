@@ -42,7 +42,6 @@ def get_user_input():
     """Get user input and add to chat history immediately upon enter"""
     user_input = st.chat_input("Ask your medical question here...")
     if user_input:
-        # Append user query to chat history immediately
         st.session_state.chat_history.append({"role": "user", "content": user_input})
     return user_input
 
@@ -50,16 +49,12 @@ def main():
     st.set_page_config(page_title="Medic AI 🤖🩺", layout="wide")
     st.title("Medic AI 🤖🩺")
     
-    # Initialize RAG chain if not already done
     initialize_rag_chain()
 
-    # Display chat history
     display_chat()
 
-    # Capture user input and respond
     user_input = get_user_input()
     if user_input:
-        # Stream the assistant's response
         with st.chat_message("assistant", avatar="🤖"):
             response_placeholder = st.empty()
             full_response = ""
@@ -70,7 +65,6 @@ def main():
                     response_placeholder.markdown(full_response + "▌")
                 response_placeholder.markdown(full_response)
                 
-                # Add assistant's response to chat history
                 st.session_state.chat_history.append({"role": "assistant", "content": full_response})
                 
             except Exception as e:
