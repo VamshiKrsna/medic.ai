@@ -9,5 +9,11 @@ langchain_community
 langchain_openai
 langchain-google-genai
 langchain_experimental
+streamlit 
+openaiopenai 
+ragas
+tqdm
+pandas
+numpy
 
 -e .
